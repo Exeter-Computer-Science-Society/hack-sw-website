@@ -52,6 +52,7 @@
 
     <!-- Add script imports here -->
     <script defer src="/scripts/script.js"></script>
+    <script defer src="/scripts/countdown.js"></script>
 
 
     <!-- Add stylesheet imports here -->
@@ -71,19 +72,45 @@
     </main>
 
     <footer <?php echo isset($page->settings['hide_footer']) ? 'style="display: none"' : '' ?> >
-        <div>
-            <p><small>Organised by:</small></p>
-            <img class="excs" src="/resources/images/excs-removebg-preview.png">
-            <br>
-            <p class="mono">University of Exeter<br>Computer Science Society</p>
-        </div>
-        <div>
+
+        <div class="footer-top">
             <div>
-                <h4></h4>
+                <p><small>Organised by:</small></p>
+                <img class="excs" src="/resources/images/excs-removebg-preview.png">
+                <br>
+                <p class="mono">University of Exeter<br>Computer Science Society</p>
             </div>
-            <ul>
-                <li></li>
-            </ul>
+            <div>
+                <div>
+                    <h4></h4>
+                </div>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-btm">
+            <p>Website designed & built by:</p>
+            <div class="created-by">
+                <a href="https://www.linkedin.com/in/edward-blewitt-a1b257224/" class="person" target="_blank">
+                    <img class="profile-image" alt="Edward Blewitt" width="35" height="35" src="https://media.licdn.com/dms/image/D4E03AQETRyU3gAL7nA/profile-displayphoto-shrink_100_100/0/1682271196994?e=1698278400&v=beta&t=JwX4qb_zMF1N8JN_-LTXJIAW7su2D3QX7wmI9-L-Nhg">
+                    <span>Edward Blewitt</span>
+                    <img class="icon" src="/resources/images/logos/external-link-icon.svg">
+                </a>
+
+                <a href="https://www.linkedin.com/in/wiktor-wiejak-703b60206/" class="person" target="_blank">
+                    <img class="profile-image" alt="Wiktor Wiejak" width="35" height="35" src="https://media.licdn.com/dms/image/D4E03AQEyKr52GPVpgw/profile-displayphoto-shrink_100_100/0/1680262370174?e=1698278400&v=beta&t=Yyfj4uAfRRFz2BQuK_o--kq9fzhc7kMgY0l_V6wagc8">
+                    <span>Wiktor Wiejak</span>
+                    <img class="icon" src="/resources/images/logos/external-link-icon.svg">
+                </a>
+
+                <a class="person" target="_blank">
+                    <img class="profile-image" alt="Callum Young" width="35" height="35" src="/resources/images/callum-small.jpg">
+                    <span>Callum Young</span>
+                    <img class="icon" src="/resources/images/logos/external-link-icon.svg">
+                </a>
+            </div>
         </div>
     </footer>
 
