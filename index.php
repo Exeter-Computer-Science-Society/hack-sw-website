@@ -59,19 +59,13 @@
 
     <!-- Add stylesheet imports here -->
     <link rel="stylesheet" href="/resources/stylesheets/globals.css">
-
     <link rel="stylesheet" href="/resources/stylesheets/utils.css">
+    <link rel="stylesheet" href="/resources/stylesheets/default-styles.css">
 
 </head>
 <body>
     <header <?php echo isset($page->settings['hide_heading']) ? 'style="display: none"' : '' ?>>
-        <nav>
-            <a>Home</a>
-            <a>The Committee</a>
-            <a>Hack SW</a>
-            <a>Student Mentoring</a>
-            <a>Partners</a>
-        </nav>
+
     </header>
 
     <main>
@@ -80,7 +74,7 @@
     </main>
 
     <footer <?php echo isset($page->settings['hide_footer']) ? 'style="display: none"' : '' ?> >
-        
+        Footer?
     </footer>
 
 </body>
