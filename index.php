@@ -50,11 +50,8 @@
         }
     ?>
 
-
-
-
     <!-- Add script imports here -->
-    <script defer src="/scripts/typewriter.js"></script>
+    <script defer src="/scripts/script.js"></script>
 
 
     <!-- Add stylesheet imports here -->
@@ -74,7 +71,20 @@
     </main>
 
     <footer <?php echo isset($page->settings['hide_footer']) ? 'style="display: none"' : '' ?> >
-        Footer?
+        <div>
+            <p><small>Organised by:</small></p>
+            <img class="excs" src="/resources/images/excs-removebg-preview.png">
+            <br>
+            <p class="mono">University of Exeter<br>Computer Science Society</p>
+        </div>
+        <div>
+            <div>
+                <h4></h4>
+            </div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
     </footer>
 
 </body>
