@@ -1,0 +1,62 @@
+/* Styles the text to the monospaced font */
+.mono {
+    font-family: var(--mono-font);
+}
+
+/* Styles the text to the sans-serif font */
+.sans-serif {
+    font-family: var(--sans-serif-font);
+}
+
+.thin {
+    font-weight: 200;
+}
+
+.typewriter {
+    display: none;
+}
+
+
+.page-padding {
+    padding-left: var(--page-padding-left);
+    padding-right: var(--page-padding-right);
+}
+
+.icon {
+    display: inline;
+    object-fit: contain;
+    width: 1em;
+    height: 0.85em;
+    margin-right: 0.5em;
+}
+
+.excs {
+    height: 4rem;
+    object-fit: contain;
+}
+
+.col-10 {
+    color: var(--10);
+}
+
+.button {
+    border-radius: 4px;
+    padding: 8px 14px;
+    border: 1.6px solid var(--10);
+    color: var(--10);
+    font-size: 0.9em;
+    font-weight: 900;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.big.button {
+    padding: 12px 20px;
+    font-size: 1.05rem;
+}
+
+.filled-button {
+    background-color: var(--10);
+    color: rgb(20, 20, 20);
+}
