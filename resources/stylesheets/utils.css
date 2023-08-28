@@ -60,3 +60,19 @@
     background-color: var(--10);
     color: rgb(20, 20, 20);
 }
+.email{
+    width: 30px;
+    height: 20px;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contactText{
+    margin-left: 10px;
+}
+.phone{
+    width: 30px;
+    height: 30px;
+}
