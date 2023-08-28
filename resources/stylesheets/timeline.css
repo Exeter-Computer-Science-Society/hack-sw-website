@@ -81,7 +81,7 @@ h2 {
     }
 
     &:after {
-        border-right-color: #000000;
+        border-right-color: var(--bg);
         border-width: 17px;
         top: 50%;
         margin-top: -17px;
@@ -186,7 +186,7 @@ label {
         }
 
         &:after {
-            border-bottom-color: #000000;
+            border-bottom-color: var(--bg);
             border-width: 20px;
             top: -20px;
             left: 50px;
