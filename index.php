@@ -59,6 +59,7 @@
     <link rel="stylesheet" href="/resources/stylesheets/globals.css">
     <link rel="stylesheet" href="/resources/stylesheets/utils.css">
     <link rel="stylesheet" href="/resources/stylesheets/default-styles.css">
+    <link rel="stylesheet" href="/resources/stylesheets/timeline.css">
 
 </head>
 <body>
