@@ -1,0 +1,41 @@
+
+/* These take precedence over the default styles when the screen size is less than 800 CSS pixels in width */
+@media screen and (max-width: 800px) {
+
+    :root {
+        --page-padding-left: 8%;
+        --page-padding-right: 8%;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        background-size: 80%;
+    }
+
+    section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .hero {
+        padding-top: 100px;
+        min-height: 40vh;
+    }
+
+    .hero .inner {
+        width: 100%;
+    }
+
+    #countdown {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    footer .created-by {
+       justify-content: center;
+        flex-wrap: wrap;
+    }
+}

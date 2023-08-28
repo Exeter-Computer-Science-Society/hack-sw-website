@@ -41,6 +41,18 @@
     <meta name="description" content="<?php
         echo isset($page->settings['description']) ? $page->settings['title'] : 'Default Description'
     ?>">
+    
+    <meta property="og:description" content="<?php
+        echo isset($page->settings['description']) ? $page->settings['title'] : 'Default Description'
+    ?>" />
+
+    <?php
+
+        if(isset($page->settings['og-image'])) {
+            echo "<meta property='og:image' content='{$page->settings['og-image']}' />";
+        }
+
+    ?>
 
     <?php
         if(isset($page->settings['favicon'])) {
@@ -59,6 +71,7 @@
     <link rel="stylesheet" href="/resources/stylesheets/globals.css">
     <link rel="stylesheet" href="/resources/stylesheets/utils.css">
     <link rel="stylesheet" href="/resources/stylesheets/default-styles.css">
+    <link rel="stylesheet" href="/resources/stylesheets/mobile-devices.css">
 
 </head>
 <body>
