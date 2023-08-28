@@ -72,6 +72,7 @@
     <link rel="stylesheet" href="/resources/stylesheets/utils.css">
     <link rel="stylesheet" href="/resources/stylesheets/default-styles.css">
     <link rel="stylesheet" href="/resources/stylesheets/mobile-devices.css">
+    <link rel="stylesheet" href="/resources/stylesheets/timeline.css">
 
 </head>
 <body>
@@ -118,7 +119,7 @@
                     <img class="icon" src="/resources/images/logos/external-link-icon.svg">
                 </a>
 
-                <a class="person" target="_blank">
+                <a href="https://www.linkedin.com/in/callum-young-6b14b228a/" class="person" target="_blank">
                     <img class="profile-image" alt="Callum Young" width="35" height="35" src="/resources/images/callum-small.jpg">
                     <span>Callum Young</span>
                     <img class="icon" src="/resources/images/logos/external-link-icon.svg">
