@@ -83,8 +83,6 @@ footer .footer-btm {
     gap: 16px;
 }
 
-
-
 .hero {
     min-height: 60vh;
     padding-top: 200px;
@@ -111,6 +109,10 @@ footer .footer-btm {
 .hero .btns {
     display: flex;
     gap: 16px;
+}
+
+.about {
+    width: 60vw;
 }
 
 .location {
@@ -157,7 +159,13 @@ footer .footer-btm {
     width: 12rem;
 }
 
+.inner > iframe {
+    width: 100%;
+    max-width: 500px;
+}
+
 .sponsors {
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;

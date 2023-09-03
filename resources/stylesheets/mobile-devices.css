@@ -29,6 +29,7 @@
         width: 100%;
     }
 
+
     #countdown {
         gap: 0;
         flex-direction: column;
@@ -38,4 +39,10 @@
        justify-content: center;
         flex-wrap: wrap;
     }
+
+    .about {
+        width: 80vw;
+    }
+
+
 }

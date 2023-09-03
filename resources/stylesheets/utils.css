@@ -52,6 +52,7 @@
 }
 
 .button:hover {
+    box-shadow: -4px -3px 45px 21px rgba(62, 62, 62, 0.35);
     outline: outset 3px var(--10) solid;
 }
 
