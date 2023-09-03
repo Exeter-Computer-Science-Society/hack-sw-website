@@ -38,7 +38,6 @@ h2 {
 }
 
 .circle {
-  
     margin-top: -10px;
     top: 50%;
     left: -44px;
@@ -50,8 +49,9 @@ h2 {
     display: block;
     position: absolute;
 }
+
 .content {
-    max-height: 20px;
+    max-height: 40px;
     padding: 50px 20px 0;
     border-color: transparent;
     border-width: 2px;
@@ -85,7 +85,7 @@ h2 {
 
 }
 
-.content > p {
+.content > * {
     max-height: 0;
     color: transparent;
     text-align: justify;
@@ -124,15 +124,15 @@ label {
     }
 
     & ~ .content {
-        max-height: 180px;
+        max-height: 300px;
         border-color: white;
         margin-right: 20px;
         transform: translateX(20px);
         transition: max-height 0.4s linear, border-color 0.3s linear, transform 0.2s linear;
     }
 
-    & ~ .content > p {
-        max-height: 200px;
+    & ~ .content > * {
+        max-height: 250px;
         color: white;
         transition: color 0.1s linear 0.1s;
         padding-bottom: 20px;
@@ -144,7 +144,7 @@ label {
  * mobile phones (vertical version only)
  * ------------------------------------- */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
     #timeline {
         margin-left: 0;
         padding-left: 0;

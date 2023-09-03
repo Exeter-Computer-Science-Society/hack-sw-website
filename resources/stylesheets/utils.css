@@ -51,6 +51,10 @@
     cursor: pointer;
 }
 
+.button:hover {
+    box-shadow: -4px -3px 45px 21px rgba(62, 62, 62, 0.35);
+}
+
 .big.button {
     padding: 12px 20px;
     font-size: 1.05rem;
