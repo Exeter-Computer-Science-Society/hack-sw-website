@@ -51,6 +51,10 @@
     cursor: pointer;
 }
 
+.button:hover {
+    outline: outset 3px var(--10) solid;
+}
+
 .big.button {
     padding: 12px 20px;
     font-size: 1.05rem;

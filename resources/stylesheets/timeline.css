@@ -1,16 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
-body {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-  
-h2 {
-  margin: 3em 0 0 0;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
 
 /* -------------------------------------
  * timeline
@@ -30,6 +19,21 @@ h2 {
 
 #timeline > p {
     margin: 0 0 15px;
+}
+
+#google-map {
+    width: 100%;
+    height: 36rem;
+    border: none;
+}
+
+.location-inner {
+    display: flex;
+    gap: 1rem;
+}
+
+.location-inner > div {
+    flex: 1;
 }
 
 .date {

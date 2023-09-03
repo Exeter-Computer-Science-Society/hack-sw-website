@@ -77,7 +77,20 @@
 </head>
 <body>
     <header <?php echo isset($page->settings['hide_heading']) ? 'style="display: none"' : '' ?>>
-
+        <nav>
+            <a>
+                <span class="col-10">1.</span>
+                <b>Home</b>
+            </a>
+            <a>
+                <span class="col-10">2.</span>
+                <b>Register your place</b>
+            </a>
+            <a>
+                <span class="col-10">3.</span>
+                <b>EXCS</b>
+            </a>
+        </nav>
     </header>
 
     <main>
@@ -90,7 +103,7 @@
         <div class="footer-top">
             <div>
                 <p><small>Organised by:</small></p>
-                <img class="excs" src="/resources/images/excs-removebg-preview.png">
+                <img class="excs" src="/resources/images/logos/excs-logo.svg">
                 <br>
                 <p class="mono">University of Exeter<br>Computer Science Society</p>
             </div>
