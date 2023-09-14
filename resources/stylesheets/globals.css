@@ -1,0 +1,288 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #101010;
+    --60: #1b1b1b;
+    --30: #272727;
+    --10: #05ff61;
+
+    --text-strong: #f6f6f6;
+    --text-mid: #f1f1f1;
+    --text-light: #e4e4e4;
+
+    --sans-serif-font: 'REM', sans-serif;
+    --mono-font: 'Inconsolata', monospace;
+
+    --page-padding-left: 15%;
+    --page-padding-right: 15%;
+}
+
+html {
+    color: var(--text-light);
+    background-color: var(--bg);
+}
+
+body {
+    background-image: url(/resources/images/uk-sw.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+    overflow-x: hidden;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+header {
+    display: flex;
+    padding: 20px var(--page-padding-right) 20px var(--page-padding-left);
+}
+
+
+nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    display: flex;
+    gap: 1em;
+    cursor: pointer;
+}
+
+main {
+    min-height: 90vh;
+}
+
+footer {
+    background-color: var(--60);
+    border-top: 2px solid var(--30);
+    padding: 60px;
+    padding-left: var(--page-padding-left);
+    padding-right: var(--page-padding-right);
+}
+
+footer .footer-top {
+    padding: 18px;
+    border-radius: 4px;
+    background-color: var(--30);
+    display: flex;
+    gap: 2rem;
+}
+
+footer .footer-btm {
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero {
+    min-height: 60vh;
+    padding-top: 200px;
+}
+
+.hero .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 60%;
+}
+
+.hero .inner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+}
+
+.hero .inner .event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero .btns {
+    display: flex;
+    gap: 16px;
+}
+
+.about {
+    width: 60vw;
+}
+
+.location {
+    position: relative;
+}
+
+.location::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/resources/images/swiot-outer.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%) brightness(20%);
+    background-size: cover;
+}
+
+.location::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,255,0) 0%, var(--bg) 70%);
+    z-index: inherit;
+}
+
+
+.location .inner {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+.location .inner > div {
+    flex: 1;
+}
+
+.location .swiot {
+    width: 12rem;
+}
+
+.inner > iframe {
+    width: 100%;
+    max-width: 500px;
+}
+
+.sponsors {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+}
+
+.sponsors > div {
+    background-color: var(--60);
+    border-radius: 4px;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.8rem;
+    padding: 18px;
+    filter: grayscale(50%);
+    transition: 0.25s;
+    text-align: center;
+}
+
+.sponsors > div:hover {
+    filter: grayscale(0);
+}
+
+.sponsors > div > img {
+    height: 5rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.universities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.universities .uni {
+    padding: 14px;
+    background-color: rgb(186, 186, 186);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    filter: brightness(80%);
+    flex: 1;
+    aspect-ratio: 1 / 0.5;
+}
+
+.universities .uni > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.applicantsCont {
+    padding-top: 0;
+}
+
+.applicants {
+    padding-top: 0;
+    width: 100%;
+    border-radius: 4px;
+    background-color: var(--60);
+    padding: 24px;
+}
+
+.countdownCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#countdown > div {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 200;
+}
+
+#countdown > div > b {
+    font-size: 3rem;
+    color: var(--10);
+}
+
+.created-by {
+    display: flex;
+    gap: 1em;   
+}
+
+.created-by .person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background-color: var(--30);
+    border-radius: 200px;
+    color: var(--text-strong);
+    cursor: pointer;
+}
+
+.created-by .person:hover {
+    outline: 1.6px solid currentColor;
+}
+
+.created-by .person .profile-image {
+    border-radius: 200px;
+}

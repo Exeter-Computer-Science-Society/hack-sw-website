@@ -2,7 +2,7 @@
 
 ## About
 
-A very simple PHP based headless CMS for simple static websites. Complete with a client side router.
+A very simple PHP based headless CMS for simple static websites.
 
 Webpages on your website are represented in the /webpages directory, following the file structure used there.
 
@@ -21,6 +21,7 @@ For example: A website with three webpages, at paths: **/**, **/contact-us**, an
     └── my-first-project
         │
         └── page.html
+
 ```
 
 ## How to structure a page.html file
@@ -41,27 +42,13 @@ Description: This is the description of the webpage
 Read more about page settings later on.
 
 
-## Stylesheets
-Headless CMS supports two ways of using stylesheets, depending on whether you want the CSS styles to be available globally across all page, or just on a specific page.
+## Stylesheets and Other Resources
+To use stylesheets, images or any other resources from the same domain, store them in the **/resources** directory. Make sure when they are referenced in the webpage to include the **/resources** directory name.
 
-### 1. Global Styles
-Store these stylesheets the same as any other resource in the **/resources** directory. Link to these stylesheets from the <head> tag of the index.php file, so they are loaded with every page.
-
-### 2. Page-Specific Styles
-If styles are only intended to be used on one webpage, reduce unused CSS by adding a **styles.css** file to that page's directory.
-
-For example: If the page at **/test** required some page-specific styles you would create the file **/webpages/test/styles.css**. The styles in this file will *automatically* be inserted with the page content from the **page.html** file.
-
-
-## General Resources
-To store any resources such as stylesheets or images, store them in the **/resources** directory.
-
-Make sure when you reference them in a webpage, you include the **/resources/...** directory name.
-
-For Example: Referencing an image stored at **/resources/images/photo.png** would look like:
+For Example: importing a stylesheet called 'styles.css' would look like:
 
 ```html
-<img src="/resources/images/photo.png">
+<link rel="stylesheet" href="/resources/styles.css">
 ```
 
 ### Importing Scripts
@@ -83,6 +70,7 @@ only equals '=' characters.
 <!-- These are the page settings -->
 Title: My Webpage
 Description: This is the description of the webpage
+Hide_Heading
 =================
 
 <h1>This is a heading</h1>
@@ -92,87 +80,17 @@ Description: This is the description of the webpage
 
 **Note:** Page Settings supports *inline* HTML comments. Not multiline!
 
-### Supported Page Settings
-Note: *Page setting names (keys) are NOT case-sensitive. Eg. to set the title both 'Title' and 'title' will work fine*
-
-#### Basic Setting
+### Supported page settings:
 | Setting Name | Value | Description |          
 | ------------ | ----- | ----------- |
-| title        | 'Page Title' | This will set the page's ```<title/>``` tag. *Note this also sets the og-title property*. |
-| description  | 'Page Description' | This will set the page's ```<meta  name="description" />``` and ```<meta  property="og:description" />``` tags. |
-| favicon      | /resources/... Path to image | This will set the shortcut 'favicon' for this page. The default favicon value is: /resources/favicon.png |
-| og-image | Full URL image | Sets the content of the ```<meta  name="og:image" />``` tag. |
-| og-url | Full URL of this resource | Sets the content of the ```<meta  name="og:url" />``` tag. |
-| og-type | Type of this resource | Sets the content of the ```<meta  name="og:type" />``` tag. See [reference](https://ogp.me/#types) for a list of valid Open Graph types. |
+| Title        | 'Page Title' | This will set the page's ```<title/>``` tag |
+| Description  | 'Page Description' | This will set the page's ```<meta  name="description" />``` tag |
+| Favicon      | /resources/... Path to image | This will set the shortcut 'favicon' for this page. The default favicon value is: /resources/favicon.png |
+| og-image | /resources/... Path to Image | This will set the Open Graph Protocol Image so the link renders will whilst being shared over social media |
+| Hide_Heading   | - |Just adding this key will hide the heading from showing on this page |
+| Hide_Footer    | - |Just adding this key will hide the footer from showing on this page |
 
-
-### Open Graph Protocol
-A lot of the page settings start with 'og-....' This is because these are used to set the content of the ```<meta>``` tags used by the Open Graph Protocol.
-
-The OGP is used to make your links look good well when shared on social media. [Learn more about the OGP.](https://ogp.me/)
-
-
-
-## Client Side Router (CSR)
-All websites built with this headless CMS use the built-in client side router by default.
-
-This means that when the user navigates, rather than reloading the entire page the CSR will instead fetch this page and replace the existing page, without performing a full-page navigation.
-
-The CSR also caches the 5 most recently visited pages, this makes navigating back appear almost instant.
-
-### Using JavaScript with the CSR
-The CSR effectivley makes your webpage into a single page application. **This means that javascript that is loaded in for specific pages may not work as expected!**
-
-Generally, to avoid complications add ```<script>``` tags to the ```<head>``` of the *index.php* file.
-
-Keep in mind that these scripts will **only be loaded in once**, when the user first arrives at the website. If you want to use JavaScript when a page loads, then make sure it is using a 'load' event listener on the ```window``` object!
-
-For JavaScript that you want to be used on a **specific page(s) only**, headless-cms provides a solution. The two functions ```onPageLoad``` and ```onPagesLoad``` can be used to attach callbacks that will be run when a specific page is loaded.
-
-**Example:**
-
-```js
-import { onPageLoad, onPagesLoad } from "/headless-cms-scripts/client-side-router.js";
-
-
-onPageLoad('/', () => {
-    console.log('Homepage is loaded!')
-})
-
-
-onPagesLoad([ '/about', '/contact' ], () => {
-    console.log('/about OR /contact is loaded')
-})
-```
-
-
-#### Triggering the CSR
-By default the CSR will override the default navigation behavior of any link that points to a page that is from the same origin (Same domain, sub-domains and protocol).
-
-**Example:**
-
-```js
-// Trigger the Client Side Router to navigate to a URL
-// using the navigate_to_page() function.
-
-window.router.navigate_to_page(url)
-
-```
-
-*It should be noted that the CSR is mounted **after** The page has fully loaded.*
-
-
-### Disabling the CSR
-If the above does not sound right for your website no problem! Simply comment out/remove the ```<script>``` tag that imports the CSR from the *index.php* file.
-
-It looks like this:
-```html
-<!-- Import the Client Side Router -->
-<!-- Remove this if you don't wish to use the client-side routing function of the Headless CMS -->
-<script type="module" defer src="/headless-cms-scripts/client-side-router.js"></script>
-```
-
-
+*Page setting names (keys) are NOT case-sensitive. Eg. to set the title both 'Title' and 'title' will work fine*
 
 ## Other Points to Note
 - By default, AlpineJS is imported to every webpage, if you don't with to use AlpineJS in your website, simply remove the import tag from the **index.php** file.
