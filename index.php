@@ -76,7 +76,7 @@
 
 </head>
 <body>
-    <header <?php echo isset($page->settings['hide_heading']) ? 'style="display: none"' : '' ?>>
+    <header>
         <nav>
             <a>
                 <span class="col-10">1.</span>
@@ -98,23 +98,26 @@
         <?php echo $page->content; ?>
     </main>
 
-    <footer <?php echo isset($page->settings['hide_footer']) ? 'style="display: none"' : '' ?> >
+    <footer>
 
         <div class="footer-top">
-            <div>
-                <p><small>Organised by:</small></p>
-                <img class="excs" src="/resources/images/logos/excs-logo.svg">
-                <br>
-                <p class="mono">University of Exeter<br>Computer Science Society</p>
-            </div>
-            <div>
+
+            <a href="https://excs.uk" target="_blank" id="organised-by">
                 <div>
-                    <h4></h4>
+                    <p>Organised by:</p>
+                    <img class="excs-logo" src="/resources/images/logos/excs-logo.svg">
                 </div>
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
+                <div class="society-name">
+                    <img src="/resources/images/computer-s-s.svg">
+                    <img src="/resources/images/c-science-s.svg">
+                    <img src="/resources/images/c-s-society.svg">
+                </div>
+                <div class="uni">
+                    <img class="icon" src="/resources/images/logos/exeter-no-bg.png">
+                    <span>University of Exeter</span>
+                </div>
+            </a>
+
         </div>
 
         <div class="footer-btm">
