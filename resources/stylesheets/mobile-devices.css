@@ -30,11 +30,6 @@
     }
 
 
-    #countdown {
-        gap: 0;
-        flex-direction: column;
-    }
-
     footer .created-by {
        justify-content: center;
         flex-wrap: wrap;
@@ -44,5 +39,9 @@
         width: 80vw;
     }
 
+    .btns {
+        flex-direction: column;
+        gap: 4px;
+    }
 
 }

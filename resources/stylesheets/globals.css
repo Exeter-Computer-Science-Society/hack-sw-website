@@ -106,6 +106,8 @@ footer #organised-by .excs-logo {
     height: 4rem;
 }
 
+
+
 footer #organised-by .uni {
     display: flex;
     align-content: center;
@@ -125,6 +127,8 @@ footer #organised-by .uni > .icon {
 footer #organised-by .society-name {
     display: flex;
     gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer #organised-by .society-name > img {
@@ -280,7 +284,6 @@ footer #organised-by .society-name > img {
 
 .applicants {
     padding-top: 0;
-    width: 100%;
     border-radius: 4px;
     background-color: var(--60);
     padding: 24px;
@@ -297,6 +300,7 @@ footer #organised-by .society-name > img {
 #countdown {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 2rem;
 }
 
