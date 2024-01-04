@@ -1,7 +1,7 @@
 const countdown = document.querySelector("#countdown")
 
 // Date  of the hackathons
-let hackathonDate = new Date('2024-02-14')
+let hackathonDate = new Date('2024-02-16')
 
 setInterval(refreshTimer, 1000)
 
