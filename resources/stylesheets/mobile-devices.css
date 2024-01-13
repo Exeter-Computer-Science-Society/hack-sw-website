@@ -44,4 +44,9 @@
         gap: 4px;
     }
 
+    .location .inner {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
 }
