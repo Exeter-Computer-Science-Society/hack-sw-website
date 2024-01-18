@@ -127,7 +127,7 @@
                 </a>
 
                 <a href="https://www.linkedin.com/in/wiktor-wiejak-703b60206/" class="person" target="_blank">
-                    <img class="profile-image" alt="Wiktor Wiejak" width="35" height="35" src="https://media.licdn.com/dms/image/D4E03AQEyKr52GPVpgw/profile-displayphoto-shrink_100_100/0/1680262370174?e=1698278400&v=beta&t=Yyfj4uAfRRFz2BQuK_o--kq9fzhc7kMgY0l_V6wagc8">
+                    <img class="profile-image" alt="Wiktor Wiejak" width="35" height="35" src="/resources/images/Wiktor-small.jpg">
                     <span>Wiktor Wiejak</span>
                     <img class="icon" src="/resources/images/logos/external-link-icon.svg">
                 </a>
@@ -140,6 +140,7 @@
             </div>
         </div>
     </footer>
+    
 
 </body>
 </html>
