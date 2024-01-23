@@ -207,12 +207,11 @@ footer .footer-btm {
 
 .universities .uni {
     padding: 14px;
-    background-color: rgb(186, 186, 186);
+    background-color: rgb(249, 249, 249);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    filter: brightness(40%);
 }
 
 .universities .uni > img {
