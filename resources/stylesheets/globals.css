@@ -267,7 +267,7 @@ footer #organised-by .society-name > img {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    filter: brightness(80%);
+    filter: brightness(90%);
     flex: 1;
     aspect-ratio: 1 / 0.5;
 }
