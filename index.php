@@ -54,6 +54,19 @@
 
     ?>
 
+    
+    <meta property="og:description" content="<?php
+        echo isset($page->settings['description']) ? $page->settings['title'] : 'Default Description'
+    ?>" />
+
+    <?php
+
+        if(isset($page->settings['og-image'])) {
+            echo "<meta property='og:image' content='{$page->settings['og-image']}' />";
+        }
+
+    ?>
+
     <?php
         if(isset($page->settings['favicon'])) {
             echo "<link rel='shortcut icon' type='image' href='{$page->settings['favicon']}' />";
@@ -65,6 +78,8 @@
     <!-- Add script imports here -->
     <script defer src="/scripts/script.js"></script>
     <script defer src="/scripts/countdown.js"></script>
+    <script defer src="/scripts/script.js"></script>
+    <script defer src="/scripts/countdown.js"></script>
 
 
     <!-- Add stylesheet imports here -->
@@ -73,11 +88,26 @@
     <link rel="stylesheet" href="/resources/stylesheets/default-styles.css">
     <link rel="stylesheet" href="/resources/stylesheets/mobile-devices.css">
     <link rel="stylesheet" href="/resources/stylesheets/timeline.css">
+    <link rel="stylesheet" href="/resources/stylesheets/default-styles.css">
+    <link rel="stylesheet" href="/resources/stylesheets/mobile-devices.css">
+    <link rel="stylesheet" href="/resources/stylesheets/timeline.css">
 
 </head>
 <body>
     <header>
         <nav>
+            <a>
+                <span class="col-10">1.</span>
+                <b>Home</b>
+            </a>
+            <a>
+                <span class="col-10">2.</span>
+                <b>Register your place</b>
+            </a>
+            <a>
+                <span class="col-10">3.</span>
+                <b>EXCS</b>
+            </a>
             <a>
                 <span class="col-10">1.</span>
                 <b>Home</b>
@@ -143,6 +173,7 @@
             </div>
         </div>
     </footer>
+    
 
 </body>
 </html>

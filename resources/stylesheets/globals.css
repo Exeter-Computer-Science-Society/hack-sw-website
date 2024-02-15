@@ -29,7 +29,6 @@ body {
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 50%;
-    overflow-x: hidden;
 }
 
 section {
@@ -70,8 +69,9 @@ footer {
 footer .footer-top {
     padding: 18px;
     border-radius: 4px;
+    background-color: var(--30);
     display: flex;
-    justify-content: center;
+    gap: 2rem;
 }
 
 footer .footer-btm {
@@ -82,61 +82,6 @@ footer .footer-btm {
     align-items: center;
     gap: 16px;
 }
-
-
-footer #organised-by {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    text-align: center;
-    width: max-content;
-    background-color: var(--30);
-    border-radius: 6px;
-    padding: 32px;
-    border: 1.4px solid transparent;
-    cursor: pointer;
-}
-
-footer #organised-by:hover {
-    border-color: var(--10);
-}
-
-footer #organised-by .excs-logo {
-    height: 4rem;
-}
-
-
-
-footer #organised-by .uni {
-    display: flex;
-    align-content: center;
-    gap: 12px;
-    width: max-content;
-    border: 1.8px solid grey;
-    padding: 8px;
-}
-
-footer #organised-by .uni > .icon {
-    background-color: whitesmoke;
-    border-radius: 50%;
-    width: 1.4rem;
-    height: 1.4rem;
-}
-
-footer #organised-by .society-name {
-    display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-footer #organised-by .society-name > img {
-    height: 1.2rem;
-}
-
-
-
 
 .hero {
     min-height: 60vh;
@@ -262,20 +207,15 @@ footer #organised-by .society-name > img {
 
 .universities .uni {
     padding: 14px;
-    background-color: rgb(186, 186, 186);
+    background-color: rgb(249, 249, 249);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    filter: brightness(90%);
-    flex: 1;
-    aspect-ratio: 1 / 0.5;
 }
 
 .universities .uni > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 10rem;
 }
 
 .applicantsCont {
@@ -284,6 +224,7 @@ footer #organised-by .society-name > img {
 
 .applicants {
     padding-top: 0;
+    width: 100%;
     border-radius: 4px;
     background-color: var(--60);
     padding: 24px;
@@ -300,7 +241,6 @@ footer #organised-by .society-name > img {
 #countdown {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     gap: 2rem;
 }
 

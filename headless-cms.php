@@ -27,26 +27,26 @@ function get_page() {
 
     // Path to page.html file
     $dir_path = __DIR__ . '/webpages' . $requested_path;
+    $requested_path = get_requested_path();
+
+    // Ensure there is a trailing slash
+    if(!substr($requested_path, -1) !== '/') {
+        $requested_path = $requested_path . '/';
+    }
+
+    $real_path = __DIR__ . '/webpages' . $requested_path . 'page.html' ;
 
     if(!does_page_exist($dir_path)) {
         return handle_error(404);
     }
 
     $raw_page_content = get_page_content($dir_path);
-    
+        
     if($raw_page_content == false) {
         return handle_error(500);
     }
 
-    if($raw_page_content == '') {
-        return new Page($dir_path, '', null);
-    }
-
-    list($hasSettings, $page_parts) = parse_page_content($raw_page_content);
-
-    if($hasSettings && count($page_parts) == 1) {
-        return new Page($dir_path, '', $page_parts[0]);
-    }
+    $page_parts = parse_page_content($raw_page_content);
 
     if(count($page_parts) !== 2) {
         // Then there is no splitter line
