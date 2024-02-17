@@ -1,0 +1,11 @@
+.page {
+    padding: 50px 18%;
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+}
+
+.underline {
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
