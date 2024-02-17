@@ -96,29 +96,9 @@
 <body>
     <header>
         <nav>
-            <a>
+            <a href="/terms-and-conditions">
                 <span class="col-10">1.</span>
-                <b>Home</b>
-            </a>
-            <a>
-                <span class="col-10">2.</span>
-                <b>Register your place</b>
-            </a>
-            <a>
-                <span class="col-10">3.</span>
-                <b>EXCS</b>
-            </a>
-            <a>
-                <span class="col-10">1.</span>
-                <b>Home</b>
-            </a>
-            <a>
-                <span class="col-10">2.</span>
-                <b>Register your place</b>
-            </a>
-            <a>
-                <span class="col-10">3.</span>
-                <b>EXCS</b>
+                <b>Terms & Conditions</b>
             </a>
         </nav>
     </header>
